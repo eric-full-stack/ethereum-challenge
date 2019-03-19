@@ -1,0 +1,124 @@
+ [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "words",
+      "outputs": [
+        {
+          "name": "word",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x884fc838"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "countWords",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xd4d33a6f"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "word",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "date",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "name": "WordCreated",
+      "type": "event",
+      "signature": "0x098cd11efdcf28811bcd68e9834942141c1a6378faca4ce601efc6065f67a14f"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_word",
+          "type": "string"
+        }
+      ],
+      "name": "createWord",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x017f7223"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "string"
+        }
+      ],
+      "name": "contains",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x6833d54f"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "string"
+        }
+      ],
+      "name": "getByDate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xa8ac891b"
+    }
+  ]

@@ -10,7 +10,12 @@ const EthereumTx = require('ethereumjs-tx')
 require('dotenv').config()
 
 app = express()
-app.use(cors())
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*')
+	res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+	next()
+})
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ 
 	extended: true

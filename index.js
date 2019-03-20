@@ -19,6 +19,7 @@ app.use(function(req, res, next) {
 	res.header("Access-Control-Expose-Headers", "Access-Control-*")
 	next()
 })
+
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ 
 	extended: true
@@ -72,7 +73,7 @@ app.get('/word', async (req, res, next) => {
 
 app.post('/word', async (req, res, next) => {
 	try{
-
+		req.setTimeout(0)
 		var privateKey = Buffer.from(process.env.PRIVATEKEY, 'hex')
 		var nonce = 0;
 		await web3.eth.getTransactionCount(account).then(count => {

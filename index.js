@@ -131,6 +131,7 @@ app.post('/word', async (req, res, next) => {
 	}
 })
 
-app.listen(9001)
-
-util.log('Listening on port 9001')
+var server = app.listen(process.env.PORT || 8080, function () {
+  var port = server.address().port;
+  util.log("Express is working on port " + port);
+});

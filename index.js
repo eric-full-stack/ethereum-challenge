@@ -16,14 +16,6 @@ app.use(bodyparser.urlencoded({
 	extended: true
 }))
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
-
 const ABI = require('./WordsList.json')
 const WORDS_LIST_ADDRESS = process.env.ADDRESS
 const web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/c81282a144ae4d26837984d149cbf724'))
